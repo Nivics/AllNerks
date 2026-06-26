@@ -1,0 +1,734 @@
+/* ================= RESET BÁSICO E VARIÁVEIS ================= */
+
+:root {
+
+    --amarelo-claro: #fceb3d;
+
+    --amarelo-escuro: #f4d331;
+
+    --amarelo-titulo: #fffac9;
+
+    --cor-texto: #000;
+
+    --cor-texto-secundario: #717171;
+
+}
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Itim', cursive;
+
+}
+
+body {
+
+    background-color: #fff;
+
+    color: var(--cor-texto);
+
+    overflow-x: hidden;
+
+}
+
+/* ================= CABEÇALHO (IGUAL À HOME) ================= */
+
+.top-bar {
+
+    background-color: var(--amarelo-claro);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 5%;
+
+    gap: 20px;
+
+}
+
+.logo-container {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.logo-link {
+
+    display: block;
+
+    height: 80px;
+
+    width: 80px;
+
+}
+
+.logo-container .logo-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.search-form {
+
+    flex-grow: 1;
+
+    max-width: 800px;
+
+}
+
+.search-input {
+
+    width: 100%;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    font-size: 20px;
+
+    color: var(--cor-texto-secundario);
+
+    outline: none;
+
+}
+
+.header-icons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.icon-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--cor-texto);
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+
+}
+
+/* Efeito de crescer nos ícones do topo */
+
+.icon-link:hover {
+
+    transform: scale(1.1);
+
+}
+
+.icon-svg {
+
+    width: 35px;
+
+    height: 35px;
+
+}
+
+/* ================= NAVEGAÇÃO E MENU RESPONSIVO ================= */
+
+.nav-bar {
+
+    background-color: var(--amarelo-escuro);
+
+    padding: 10px 5%;
+
+    position: relative;
+
+}
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px 40px;
+
+}
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--cor-texto);
+
+    font-size: 20px;
+
+    white-space: nowrap;
+
+}
+
+.menu-toggle {
+
+    display: none;
+
+}
+
+.menu-btn {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    width: 30px;
+
+    cursor: pointer;
+
+    padding: 10px 0;
+
+}
+
+.menu-btn span {
+
+    display: block;
+
+    height: 4px;
+
+    width: 100%;
+
+    background-color: var(--cor-texto);
+
+    border-radius: 2px;
+
+    transition: all 0.3s ease;
+
+}
+
+/* ================= CONTEÚDO PRINCIPAL (COLEÇÕES) ================= */
+
+.main-content {
+
+    padding: 50px 5% 80px;
+
+    text-align: center;
+
+}
+
+.title-container {
+
+    margin-bottom: 60px;
+
+}
+
+.title-container h1 {
+
+    background-color: var(--amarelo-titulo);
+
+    display: inline-block;
+
+    padding: 10px 60px;
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+}
+
+/* GRADE DE PRODUTOS */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px 40px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+.product-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: transform 0.2s ease;
+
+}
+
+/* Efeito crescer ao passar o mouse nas fotos das Coleções */
+
+.product-card:hover {
+
+    transform: scale(1.05);
+
+}
+
+.product-card a {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 320px;
+
+    aspect-ratio: 1 / 1;
+
+}
+
+.product-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border: 1px solid #000;
+
+}
+
+.product-card h2 {
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    margin-top: 15px;
+
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter {
+
+    background-color: var(--amarelo-escuro);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px 5%;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.newsletter p {
+
+    font-size: 20px;
+
+    line-height: 1.2;
+
+}
+
+.newsletter-form {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    flex-grow: 1;
+
+    max-width: 800px;
+
+}
+
+.newsletter-form input {
+
+    flex: 1;
+
+    min-width: 200px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    font-size: 18px;
+
+    outline: none;
+
+}
+
+.newsletter-form button {
+
+    background-color: var(--amarelo-claro);
+
+    border: none;
+
+    padding: 10px 25px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+/* ================= RODAPÉ ================= */
+
+.main-footer {
+
+    background-color: var(--amarelo-claro);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 40px 5%;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+}
+
+.footer-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+
+.footer-logo-link {
+
+    display: block;
+
+    width: 120px;
+
+    height: 120px;
+
+}
+
+.footer-logo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.social-contact {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.social-icons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.social-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background-color: var(--cor-texto);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition: transform 0.2s ease;
+
+}
+
+/* Efeito crescer nos ícones das redes sociais */
+
+.social-icon:hover {
+
+    transform: scale(1.1);
+
+}
+
+.social-icon img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 8px;
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    gap: 60px;
+
+    flex-wrap: wrap;
+
+}
+
+.link-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.footer-font {
+
+    font-family: 'Julius Sans One', sans-serif;
+
+    text-decoration: none;
+
+    color: var(--cor-texto);
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+}
+
+/* ================= RESPONSIVIDADE COMPLETA (MOBILE) ================= */
+
+@media (max-width: 768px) {
+
+    .top-bar {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 15px;
+
+    }
+
+    .search-form {
+
+        width: 100%;
+
+    }
+
+    .menu-btn {
+
+        display: flex;
+
+        margin: 0 auto;
+
+    }
+
+    .nav-links {
+
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        text-align: center;
+
+        gap: 15px;
+
+        padding-top: 10px;
+
+    }
+
+    /* Ativação do menu hambúrguer puro CSS via Checkbox */
+
+    .menu-toggle:checked ~ .nav-links {
+
+        display: flex;
+
+    }
+
+    .menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+
+        transform: rotate(-45deg) translate(-5px, 6px);
+
+    }
+
+    .menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+
+        opacity: 0;
+
+    }
+
+    .menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+
+        transform: rotate(45deg) translate(-5px, -6px);
+
+    }
+
+    /* Ajuste da Grade para Celulares (2 Colunas por linha) */
+
+    .product-grid {
+
+        display: grid !important;
+
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 24px 16px !important;
+
+    }
+
+    .title-container h1 {
+
+        font-size: 32px;
+
+        padding: 8px 40px;
+
+    }
+
+    .product-card h2 {
+
+        font-size: 16px;
+
+    }
+
+    .newsletter { flex-direction: column; text-align: center; }
+
+    .newsletter-form { flex-direction: column; width: 100%; }
+
+    .main-footer {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+    .footer-left { flex-direction: column; justify-content: center; }
+
+    .social-contact { flex-direction: column; }
+
+    .footer-links { justify-content: center; text-align: center; gap: 30px; }
+
+    /* Mantém a segurança: se sobrar algum item sozinho embaixo, ele centraliza automático */
+
+    .product-grid .product-card:last-child:nth-child(odd) {
+
+        grid-column: span 2 !important;
+
+        margin: 0 auto !important;
+
+        width: 100% !important;
+
+        max-width: calc(50% - 8px) !important;
+
+    }
+
+}
+
+/* ================= BARRA DE PESQUISA COM LUPINHA FOFA ================= */
+
+.search-form {
+    flex-grow: 1;
+    max-width: 800px;
+    position: relative; /* Permite posicionar a lupinha fixada dentro dela */
+}
+ 
+.search-input {
+    width: 100%;
+    padding: 12px 55px 12px 25px; /* Aumentamos o espaço da direita para o texto não passar por baixo da lupa */
+    border: none;
+    font-size: 20px;
+    color: var(--cor-texto-secundario);
+    outline: none;
+    border-radius: 30px; /* Deixa as bordas totalmente arredondadas e fofinhas! */
+}
+ 
+/* Estilo do botão invisível que segura a lupa */
+.search-button {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico fofinho */
+}
+
+/* Efeito Hover: A lupinha cresce e gira de leve ao passar o mouse */
+.search-button:hover {
+    transform: translateY(-50%) scale(1.2) rotate(5deg);
+}
+
+/* Estilo visual da Lupinha */
+.search-icon-svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: #717171; /* Cor padrão cinza do seu site */
+    stroke-width: 3.5; /* Linha mais grossa deixa o visual fofo/cartoon */
+    stroke-linecap: round; /* Pontas das linhas arredondadas */
+    stroke-linejoin: round;
+    transition: stroke 0.2s ease;
+}
+
+/* Quando passar o mouse, a lupinha fica preta (ou na cor que você preferir) */
+.search-button:hover .search-icon-svg {
+    stroke: #000;
+}
+ 

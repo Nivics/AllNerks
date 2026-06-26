@@ -1,0 +1,328 @@
+/* ================= RESET BÁSICO E VARIÁVEIS ================= */
+:root {
+    --amarelo-claro: #fceb3d;
+    --amarelo-escuro: #f4d331;
+    --cor-texto: #000;
+    --cinza-input: #f1f1f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+/* Força o body a cobrir o monitor inteiro com flexbox */
+body {
+    background-color: #fff;
+    color: var(--cor-texto);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= HEADER MINIMALISTA ================= */
+.profile-header {
+    background-color: var(--amarelo-claro);
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.profile-header .logo-link {
+    display: block;
+    width: 95px;
+    height: 86px;
+    transition: transform 0.2s ease;
+}
+
+.profile-header .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile-header .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.profile-header .icon-link:hover,
+.profile-header .logo-link:hover {
+    transform: scale(1.12);
+}
+
+.profile-header .icon-svg {
+    width: 36px;
+    height: 36px;
+}
+
+/* ================= CONTEÚDO PRINCIPAL ================= */
+.main-content {
+    flex: 1;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favoritos-wrapper {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ícone central da página (Coração) */
+.page-icon-box {
+    width: 80px;
+    height: 80px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.page-icon-box svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Título */
+.page-title {
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+/* Caixa "Você ainda não adicionou..." */
+.empty-box {
+    width: 100%;
+    padding: 50px 20px;
+    border: 1px solid var(--cor-texto); /* Borda acompanhando a identidade do form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.empty-box p {
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+/* ================= BOTÃO CONTINUE NAVEGANDO ================= */
+.action-submit-btn {
+    background-color: var(--amarelo-claro);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-texto);
+    font-size: 28px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.action-submit-btn:hover {
+    transform: scale(1.03);
+    background-color: var(--amarelo-escuro);
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter {
+    background-color: var(--amarelo-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 5%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.newsletter p {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    max-width: 800px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.newsletter-form button {
+    background-color: var(--amarelo-claro);
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+    transform: scale(1.05);
+}
+
+/* ================= RODAPÉ ================= */
+.main-footer {
+    background-color: var(--amarelo-claro);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-link {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.footer-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--cor-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-font {
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* ================= RESPONSIVIDADE (MOBILE) ================= */
+@media (max-width: 768px) {
+    .header-center-container {
+        gap: 35px;
+    }
+    .profile-header .logo-link {
+        width: 75px;
+        height: 68px;
+    }
+    .profile-header .icon-svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .favoritos-wrapper {
+        max-width: 100%;
+    }
+    .page-icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    .page-title {
+        font-size: 30px;
+    }
+    .empty-box {
+        padding: 30px 15px;
+    }
+    .empty-box p {
+        font-size: 24px;
+    }
+    .action-submit-btn {
+        font-size: 22px;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsletter { flex-direction: column; text-align: center; }
+    .newsletter-form { flex-direction: column; width: 100%; }
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-left { flex-direction: column; justify-content: center; }
+    .social-contact { flex-direction: column; }
+    .footer-links { justify-content: center; text-align: center; gap: 30px; }
+}

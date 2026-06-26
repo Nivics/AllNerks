@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrinho - Allnerks</title>
+<link rel="stylesheet" href="./carrinho.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="profile-header">
+<div class="header-center-container">
+<a href="./favoritos.html" class="icon-link" aria-label="Favoritos">
+<img src="./imagens/coracao.png" alt="Favoritos" class="header-icon-img">
+</a>
+<a href="index.html" class="logo-link" aria-label="Voltar para Home">
+<img src="./imagens/1x/ALLNERKS LOGO.png" alt="Logo Allnerds" class="logo-img">
+</a>
+<a href="./perfil.html" class="icon-link" aria-label="Minha Conta">
+<img src="./imagens/perfil.png" alt="Perfil" class="header-icon-img perfil-maior" >
+</a>
+</div>
+</header>
+<main class="main-content cart-main-override">
+<div class="cart-wrapper">
+<div class="user-avatar-box cart-avatar-box">
+<img src="./imagens/carrinho.png" alt="Carrinho" style="width: 100%; height: 100%; object-fit: contain;">
+</div>
+<h1 class="login-title">Meu Carrinho</h1>
+<div class="cart-list-container">
+<div class="cart-header-row">
+<div class="cart-col-prod">Produto</div>
+<div class="cart-col-qty">Quantidade</div>
+<div class="cart-col-price">Preço</div>
+</div>
+<div class="cart-item-row" data-price="20.00">
+<div class="cart-col-prod item-flex">
+<input type="checkbox" class="cart-checkbox">
+<div class="item-img-box">
+<img src="./imagens/holder.webp" alt="Holder">
+</div>
+<span class="item-name-text">Holder White Puppy</span>
+</div>
+<div class="cart-col-qty">
+<div class="qty-control-box">
+<button class="qty-btn btn-menos">-</button>
+<input type="text" value="1" readonly class="qty-input">
+<button class="qty-btn btn-mais">+</button>
+</div>
+</div>
+<div class="cart-col-price item-price-text">R$20,00</div>
+</div>
+<div class="cart-item-row" data-price="89.90">
+<div class="cart-col-prod item-flex">
+<input type="checkbox" class="cart-checkbox">
+<div class="item-img-box">
+<img src="./imagens/album andteam.webp" alt="Album">
+</div>
+<div class="item-name-col">
+<span class="item-name-text">Back to Life - &TEAM</span>
+<span class="item-sub-text">Album ( BREATHE ver.)</span>
+</div>
+</div>
+<div class="cart-col-qty">
+<div class="qty-control-box">
+<button class="qty-btn btn-menos">-</button>
+<input type="text" value="1" readonly class="qty-input">
+<button class="qty-btn btn-mais">+</button>
+</div>
+</div>
+<div class="cart-col-price item-price-text">R$89,90</div>
+</div>
+</div>
+<div class="cart-checkout-panel">
+<div class="panel-row">
+<span class="panel-label">Método de Pagamento:</span>
+<div class="payment-buttons">
+<input type="radio" name="payment-method" id="pay-pix" class="pay-radio">
+<label for="pay-pix" class="pay-btn">
+<img src="./imagens/pix.png" alt=""> Pix
+</label>
+<input type="radio" name="payment-method" id="pay-card" class="pay-radio">
+<label for="pay-card" class="pay-btn">
+<img src="./imagens/cartao.png" alt=""> Cartão
+</label>
+<input type="radio" name="payment-method" id="pay-boleto" class="pay-radio">
+<label for="pay-boleto" class="pay-btn">
+<img src="./imagens/boleto.png" alt=""> Boleto
+</label>
+</div>
+</div>
+<div class="panel-row split-row">
+<div class="coupon-box">
+<span class="panel-label">Cupom:</span>
+<div class="coupon-input-group">
+<input type="text" placeholder="Código" class="coupon-field">
+<button class="coupon-btn">Aplicar</button>
+</div>
+</div>
+<div class="cards-box">
+<img src="./imagens/cartoes.png" alt="Bandeiras Aceitas">
+</div>
+</div>
+<div class="panel-footer-row">
+<div class="select-all-box">
+<input type="checkbox" id="check-all" class="cart-checkbox">
+<label for="check-all">Selecionar Tudo</label>
+</div>
+<div class="total-box">
+
+                        Total: <span class="total-value">R$0,00</span>
+</div>
+<button class="login-submit-btn checkout-submit-btn">Continuar</button>
+</div>
+</div>
+</div>
+</main>
+<section class="newsletter">
+<p>Fique por dentro<br>das novidades:</p>
+<form class="newsletter-form">
+<input type="text" placeholder="Nome" required>
+<input type="email" placeholder="Email" required>
+<button type="submit">Enviar</button>
+</form>
+</section>
+<footer class="main-footer">
+<div class="footer-left">
+<a href="index.html" class="footer-logo-link">
+<img src="./imagens/1x/ALLNERKS LOGO.png" alt="Logo Allnerds" class="footer-logo">
+</a>
+<div class="social-contact">
+<span class="footer-font">CONTATO:</span>
+<div class="social-icons">
+<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+<img src="./imagens/instagram.png" alt="Instagram">
+</a>
+<a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+<img src="./imagens/facebook.png" alt="Facebook">
+</a>
+<a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+<img src="./imagens/tiktok.png" alt="TikTok">
+</a>
+<a href="mailto:contato@allnerds.com" class="social-icon" aria-label="E-mail">
+<img src="./imagens/email.png" alt="E-mail">
+</a>
+</div>
+</div>
+</div>
+<div class="footer-links">
+<div class="link-column">
+                <a href="./quemsomos.html" class="footer-font">QUEM SOMOS</a>
+                <a href="./politicas.html" class="footer-font">POLÍTICA DE<br>PRIVACIDADE</a>
+</div>
+<div class="link-column">
+<a href="./perfil.html" class="footer-font">MINHA CONTA</a>
+<a href="./pagina.html" class="footer-font">ACOMPANHAR<br>PEDIDO</a>
+<a href="./pagina.html" class="footer-font">MEUS DADOS</a>
+<a href="./pagina.html" class="footer-font">MEUS ENDEREÇOS</a>
+</div>
+<div class="link-column">
+<a href="./contato.html" class="footer-font">FALE CONOSCO</a>
+<a href="./pagina.html" class="footer-font">TROCAS E<br>DEVOLUÇÕES</a>
+<a href="./pagina.html" class="footer-font">POLÍTICA DE FRETE<br>GRÁTIS</a>
+</div>
+</div>
+</footer>
+ 
+    <script>
+
+        const checkAll = document.getElementById('check-all');
+
+        const itemCheckboxes = document.querySelectorAll('.cart-item-row .cart-checkbox');
+
+        const totalValueSpan = document.querySelector('.total-value');
+
+        const itemRows = document.querySelectorAll('.cart-item-row');
+ 
+        // Função que calcula o valor total dinamicamente com base no que está checado
+
+        function atualizarTotal() {
+
+            let total = 0;
+
+            itemRows.forEach(row => {
+
+                const checkbox = row.querySelector('.cart-checkbox');
+
+                if (checkbox.checked) {
+
+                    const preco = parseFloat(row.getAttribute('data-price'));
+
+                    const quantidade = parseInt(row.querySelector('.qty-input').value);
+
+                    total += preco * quantidade;
+
+                }
+
+            });
+
+            // Atualiza a tela formatando para a moeda local BRL
+
+            totalValueSpan.textContent = `R$${total.toFixed(2).replace('.', ',')}`;
+
+        }
+ 
+        // Lógica do Selecionar Tudo
+
+        checkAll.addEventListener('change', function() {
+
+            itemCheckboxes.forEach(cb => {
+
+                cb.checked = checkAll.checked;
+
+            });
+
+            atualizarTotal();
+
+        });
+ 
+        // Lógica dos checkboxes individuais
+
+        itemCheckboxes.forEach(cb => {
+
+            cb.addEventListener('change', function() {
+
+                const todosMarcados = Array.from(itemCheckboxes).every(item => item.checked);
+
+                checkAll.checked = todosMarcados;
+
+                atualizarTotal();
+
+            });
+
+        });
+ 
+        // Configuração dos botões de quantidade + e -
+
+        itemRows.forEach(row => {
+
+            const btnMenos = row.querySelector('.btn-menos');
+
+            const btnMais = row.querySelector('.btn-mais');
+
+            const qtyInput = row.querySelector('.qty-input');
+ 
+            // Aumentar Quantidade
+
+            btnMais.addEventListener('click', () => {
+
+                let valorAtual = parseInt(qtyInput.value);
+
+                qtyInput.value = valorAtual + 1;
+
+                atualizarTotal();
+
+            });
+ 
+            // Diminuir Quantidade
+
+            btnMenos.addEventListener('click', () => {
+
+                let valorAtual = parseInt(qtyInput.value);
+
+                if (valorAtual > 1) {
+
+                    qtyInput.value = valorAtual - 1;
+
+                    atualizarTotal();
+
+                } else if (valorAtual === 1) {
+
+                    // Pergunta se deseja excluir caso tente ir para 0, mas mantém o item sem apagar nada
+
+                    confirm("Deseja excluir o item do carrinho?");
+
+                }
+
+            });
+
+        });
+ 
+        // Inicializa o total como R$0,00 no carregamento da página
+
+        atualizarTotal();
+</script>
+</body>
+</html>
+ 

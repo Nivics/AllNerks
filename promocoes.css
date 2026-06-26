@@ -1,0 +1,492 @@
+/* ================= RESET BÁSICO E VARIÁVEIS ================= */
+:root {
+    --amarelo-claro: #fceb3d;
+    --amarelo-escuro: #f4d331;
+    --amarelo-titulo: #fdf59b;
+    --vermelho-promocao: #ff0000;
+    --cor-texto: #000;
+    --cor-texto-secundario: #717171;
+    --bg-destaque: #f3efe6;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+ 
+body {
+    background-color: #fff;
+    color: var(--cor-texto);
+    overflow-x: hidden;
+}
+ 
+/* ================= CABEÇALHO & LUPA FOFA ================= */
+.top-bar {
+    background-color: var(--amarelo-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    gap: 20px;
+}
+ 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+ 
+.logo-link {
+    display: block;
+    height: 80px;
+    width: 80px;
+}
+ 
+.logo-container .logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+ 
+.search-form {
+    flex-grow: 1;
+    max-width: 800px;
+    position: relative;
+}
+ 
+.search-input {
+    width: 100%;
+    padding: 12px 55px 12px 25px; 
+    border: none;
+    font-size: 20px;
+    color: var(--cor-texto-secundario);
+    outline: none;
+    border-radius: 30px; 
+}
+ 
+.search-button {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.search-button:hover {
+    transform: translateY(-50%) scale(1.2) rotate(5deg);
+}
+
+.search-icon-svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: #717171; 
+    stroke-width: 3.5; 
+    stroke-linecap: round; 
+    stroke-linejoin: round;
+    transition: stroke 0.2s ease;
+}
+
+.search-button:hover .search-icon-svg {
+    stroke: #000;
+}
+ 
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+ 
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+ 
+.icon-link:hover {
+    transform: scale(1.1);
+}
+ 
+.icon-svg {
+    width: 35px;
+    height: 35px;
+}
+ 
+/* ================= MENU CENTRALIZADO ================= */
+.nav-bar {
+    background-color: var(--amarelo-escuro);
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-block; 
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 20px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    transform: scale(1.05);
+}
+ 
+.menu-toggle {
+    display: none;
+}
+ 
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+ 
+.menu-btn span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--cor-texto);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ================= EXCLUSIVO PROMOÇÕES ================= */
+.main-content {
+    background-color: #fff;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.promo-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.page-title {
+    display: inline-block;
+    background-color: var(--amarelo-titulo);
+    padding: 15px 60px;
+    margin-bottom: 70px;
+}
+
+.page-title h1 {
+    font-size: 50px;
+    font-weight: normal;
+    color: #000;
+}
+
+/* A Grade de 3 Colunas */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px; /* Mais espaço vertical, um pouco menos horizontal */
+}
+
+/* O Cartão do Produto */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-link {
+    text-decoration: none;
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px; /* Distância entre foto, título e preço */
+}
+
+/* A caixa da foto com borda */
+.product-img-wrapper {
+    position: relative; /* Permite que o selo vermelho fique preso a ela */
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #c4c4c4; /* Borda fininha cinza como na imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    overflow: visible; 
+}
+
+/* O Selo Vermelho */
+.discount-badge {
+    position: absolute;
+    top: -15px; /* Sobe e sai da caixa */
+    right: -15px; /* Puxa pra direita saindo da caixa */
+    background-color: var(--vermelho-promocao);
+    color: #000;
+    padding: 6px 14px;
+    font-size: 20px;
+    font-weight: normal;
+    z-index: 2;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+/* Animação fofa na foto ao passar o mouse */
+.product-link:hover .product-img {
+    transform: scale(1.03);
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter {
+    background-color: var(--amarelo-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 5%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+ 
+.newsletter p {
+    font-size: 20px;
+    line-height: 1.2;
+}
+ 
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    max-width: 800px;
+}
+ 
+.newsletter-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+ 
+.newsletter-form button {
+    background-color: var(--amarelo-claro);
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+ 
+/* ================= RODAPÉ ================= */
+.main-footer {
+    background-color: var(--amarelo-claro);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+ 
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+ 
+.footer-logo-link {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+ 
+.footer-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+ 
+.social-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ 
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+ 
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--cor-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+ 
+.social-icon:hover {
+    transform: scale(1.1);
+}
+ 
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+ 
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+ 
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ 
+.footer-font {
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+ 
+/* ================= RESPONSIVIDADE INTERATIVA (MOBILE) ================= */
+@media (max-width: 900px) {
+    /* Diminui para 2 colunas em tablets */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+ 
+    .search-form {
+        width: 100%;
+    }
+
+    /* Menu Mobile */
+    .nav-bar {
+        text-align: left; 
+        padding: 10px 5%;
+    }
+
+    .menu-btn {
+        display: flex;
+        margin: 0 auto;
+    }
+ 
+    .nav-links {
+        display: none; 
+        width: 100%;
+        text-align: center;
+        background-color: var(--amarelo-escuro);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 15px 0;
+    }
+ 
+    .menu-toggle:checked ~ .nav-links { display: block; }
+    .menu-toggle:checked ~ .menu-btn span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+    .menu-toggle:checked ~ .menu-btn span:nth-child(2) { opacity: 0; }
+    .menu-toggle:checked ~ .menu-btn span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+ 
+    /* Responsividade Promoções */
+    .page-title h1 {
+        font-size: 36px;
+    }
+
+    .discount-badge {
+        font-size: 16px;
+        padding: 4px 10px;
+        top: -10px;
+        right: -10px;
+    }
+ 
+    /* Outros ajustes gerais */
+    .newsletter { flex-direction: column; text-align: center; }
+    .newsletter-form { flex-direction: column; width: 100%; }
+    
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-left { flex-direction: column; justify-content: center; }
+    .social-contact { flex-direction: column; }
+    .footer-links { justify-content: center; text-align: center; gap: 30px; }
+}
+
+@media (max-width: 500px) {
+    /* Cai para 1 coluna no celular pequeno */
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}

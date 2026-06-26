@@ -1,0 +1,486 @@
+/* ================= RESET E VARIÁVEIS ================= */
+
+:root {
+
+    --amarelo-claro: #fceb3d;
+
+    --amarelo-escuro: #f4d331;
+
+    --cor-texto: #000;
+
+}
+ 
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Itim', cursive;
+
+}
+ 
+body {
+
+    background-color: #fff;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+ 
+/* ================= CABEÇALHO (IGUAL ÀS OUTRAS) ================= */
+
+.top-bar {
+
+    background-color: var(--amarelo-claro);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 5%;
+
+    gap: 20px;
+
+}
+ 
+.logo-link {
+
+    display: block;
+
+    height: 80px;
+
+    width: 80px;
+
+    transition: transform 0.2s ease;
+
+}
+ 
+.logo-link:hover, .icon-link:hover {
+
+    transform: scale(1.1);
+
+}
+ 
+.logo-img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+ 
+.search-form {
+
+    flex-grow: 1;
+
+    max-width: 800px;
+
+}
+ 
+.search-input {
+
+    width: 100%;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    font-size: 20px;
+
+    outline: none;
+
+}
+ 
+.header-icons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+ 
+.icon-link {
+
+    color: var(--cor-texto);
+
+    text-decoration: none;
+
+}
+ 
+.icon-svg {
+
+    width: 35px;
+
+    height: 35px;
+
+}
+ 
+/* NAVEGAÇÃO */
+
+.nav-bar {
+
+    background-color: var(--amarelo-escuro);
+
+    padding: 10px 5%;
+
+    position: relative;
+
+}
+ 
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px 40px;
+
+}
+ 
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--cor-texto);
+
+    font-size: 20px;
+
+    /* SEM ZOOM NO HOVER CONFORME PEDIDO */
+
+}
+ 
+/* MENU MOBILE HAMBURGUER */
+
+.menu-toggle { display: none; }
+
+.menu-btn {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    width: 30px;
+
+    cursor: pointer;
+
+    padding: 10px 0;
+
+}
+
+.menu-btn span {
+
+    display: block;
+
+    height: 4px;
+
+    width: 100%;
+
+    background-color: #000;
+
+    border-radius: 2px;
+
+}
+ 
+/* ================= CONTEÚDO CONSTRUÇÃO ================= */
+
+.construction-container {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 5%;
+
+}
+ 
+.construction-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    max-width: 1400px;
+
+    text-align: center;
+
+}
+ 
+.const-img-box img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+ 
+.construction-title {
+
+    font-size: 58px;
+
+    margin-bottom: 10px;
+
+}
+ 
+.construction-subtitle {
+
+    font-size: 40px;
+
+    margin-bottom: 40px;
+
+}
+ 
+.main-illustration img {
+
+    max-width: 400px;
+
+    margin-bottom: 20px;
+
+}
+ 
+/* BOTÃO VOLTAR QUE CRESCE NO HOVER */
+
+.back-home-btn {
+
+    display: inline-block;
+
+    background-color: var(--amarelo-claro);
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 32px;
+
+    padding: 20px 50px;
+
+    border: 1px solid #000;
+
+    transition: transform 0.2s ease;
+
+}
+ 
+.back-home-btn:hover {
+
+    transform: scale(1.08);
+
+}
+ 
+/* ================= NEWSLETTER ================= */
+
+.newsletter {
+
+    background-color: var(--amarelo-escuro);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px 5%;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+}
+ 
+.newsletter p { font-size: 20px; }
+
+.newsletter-form { display: flex; gap: 15px; flex-wrap: wrap; flex-grow: 1; max-width: 800px; }
+
+.newsletter-form input { flex: 1; min-width: 200px; padding: 10px; border: none; font-size: 18px; }
+
+.newsletter-form button {
+
+    background-color: var(--amarelo-claro);
+
+    border: none;
+
+    padding: 10px 25px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+ 
+/* ================= RODAPÉ ================= */
+
+.main-footer {
+
+    background-color: var(--amarelo-claro);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 40px 5%;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+}
+ 
+.footer-left { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; }
+
+.footer-logo { width: 120px; height: 120px; object-fit: contain; }
+
+.social-contact { display: flex; align-items: center; gap: 15px; }
+
+.social-icons { display: flex; gap: 10px; }
+
+.social-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background-color: #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: transform 0.2s ease;
+
+}
+ 
+.social-icon:hover { transform: scale(1.15); }
+
+.social-icon img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+ 
+.footer-links { display: flex; gap: 60px; flex-wrap: wrap; }
+
+.link-column { display: flex; flex-direction: column; gap: 10px; }
+
+.footer-font { font-family: 'Julius Sans One'; text-decoration: none; color: #000; font-size: 14px; text-transform: uppercase; }
+ 
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .top-bar { flex-direction: column; }
+
+    .menu-btn { display: flex; margin: 0 auto; }
+
+    .nav-links {
+
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        text-align: center;
+
+        gap: 15px;
+
+        padding-top: 10px;
+
+    }
+
+    .menu-toggle:checked ~ .nav-links { display: flex; }
+
+    .construction-grid { grid-template-columns: 1fr; }
+
+    .construction-title { font-size: 32px; }
+
+    .construction-subtitle { font-size: 24px; }
+
+    .back-home-btn { font-size: 22px; width: 100%; }
+
+    .main-footer { flex-direction: column; align-items: center; text-align: center; }
+
+    .footer-links { justify-content: center; }
+
+}
+
+/* ================= BARRA DE PESQUISA COM LUPINHA FOFA ================= */
+
+.search-form {
+    flex-grow: 1;
+    max-width: 800px;
+    position: relative; /* Permite posicionar a lupinha fixada dentro dela */
+}
+ 
+.search-input {
+    width: 100%;
+    padding: 12px 55px 12px 25px; /* Aumentamos o espaço da direita para o texto não passar por baixo da lupa */
+    border: none;
+    font-size: 20px;
+    color: var(--cor-texto-secundario);
+    outline: none;
+    border-radius: 30px; /* Deixa as bordas totalmente arredondadas e fofinhas! */
+}
+ 
+/* Estilo do botão invisível que segura a lupa */
+.search-button {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico fofinho */
+}
+
+/* Efeito Hover: A lupinha cresce e gira de leve ao passar o mouse */
+.search-button:hover {
+    transform: translateY(-50%) scale(1.2) rotate(5deg);
+}
+
+/* Estilo visual da Lupinha */
+.search-icon-svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: #717171; /* Cor padrão cinza do seu site */
+    stroke-width: 3.5; /* Linha mais grossa deixa o visual fofo/cartoon */
+    stroke-linecap: round; /* Pontas das linhas arredondadas */
+    stroke-linejoin: round;
+    transition: stroke 0.2s ease;
+}
+
+/* Quando passar o mouse, a lupinha fica preta (ou na cor que você preferir) */
+.search-button:hover .search-icon-svg {
+    stroke: #000;
+}
+ 

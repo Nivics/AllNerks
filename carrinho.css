@@ -1,0 +1,476 @@
+/* ================= RESET E VARIÁVEIS DO PERFIL ================= */
+
+:root {
+
+    --amarelo-claro: #fceb3d;
+
+    --amarelo-escuro: #f4d331;
+
+    --cor-texto: #000;
+
+    --cinza-input: #f1f1f1;
+
+}
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Itim', cursive;
+
+}
+
+body {
+
+    background-color: #fff;
+
+    color: var(--cor-texto);
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+/* ================= HEADER MINIMALISTA ================= */
+
+.profile-header {
+
+    background-color: var(--amarelo-claro);
+
+    width: 100%;
+
+    padding: 12px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.header-center-container { display: flex; align-items: center; justify-content: center; gap: 50px; }
+
+.profile-header .logo-link { display: block; width: 95px; height: 86px; transition: transform 0.2s ease; }
+
+.profile-header .logo-img { width: 100%; height: 100%; object-fit: contain; }
+
+.profile-header .icon-link { display: flex; align-items: center; justify-content: center; color: var(--cor-texto); text-decoration: none; transition: transform 0.2s ease; }
+
+.profile-header .icon-link:hover, .profile-header .logo-link:hover { transform: scale(1.12); }
+ 
+/* Nova classe criada para controlar as imagens dos ícones do Header */
+
+.profile-header .header-icon-img {
+
+    width: 36px;
+
+    height: 36px;
+
+    object-fit: contain;
+
+}
+
+/* ================= ESTRUTURA DO CARRINHO ================= */
+
+.main-content {
+
+    flex: 1;
+
+    padding: 40px 5%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.cart-main-override { align-items: flex-start; padding-top: 50px; }
+
+.cart-wrapper {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.user-avatar-box { width: 95px; height: 90px; color: #000; margin-bottom: 20px; }
+
+.login-title { font-size: 38px; font-weight: normal; margin-bottom: 35px; }
+
+/* --- LISTA DE PRODUTOS --- */
+
+.cart-list-container {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+
+}
+
+.cart-header-row {
+
+    display: flex;
+
+    background-color: var(--amarelo-claro);
+
+    border: 1px solid #000;
+
+    padding: 15px;
+
+    font-size: 24px;
+
+}
+
+.cart-item-row {
+
+    display: flex;
+
+    border: 1px solid #000;
+
+    background-color: #fff;
+
+    padding: 15px;
+
+    align-items: center;
+
+}
+
+.cart-col-prod { width: 50%; }
+
+.cart-col-qty { width: 25%; display: flex; justify-content: center; }
+
+.cart-col-price { width: 25%; display: flex; justify-content: center; align-items: center; }
+
+.item-flex {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.cart-checkbox {
+
+    width: 24px;
+
+    height: 24px;
+
+    accent-color: var(--amarelo-escuro);
+
+    cursor: pointer;
+
+}
+
+.item-img-box {
+
+    width: 80px;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.item-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.item-name-col { display: flex; flex-direction: column; }
+
+.item-name-text { font-size: 24px; }
+
+.item-sub-text { font-size: 16px; color: #666; }
+
+.item-price-text { font-size: 24px; }
+
+/* Controles de Quantidade */
+
+.qty-control-box {
+
+    display: flex;
+
+    border: 1px solid #000;
+
+    height: 40px;
+
+}
+
+.qty-btn {
+
+    background-color: var(--cinza-input);
+
+    border: none;
+
+    width: 35px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+.qty-input {
+
+    width: 45px;
+
+    text-align: center;
+
+    border: none;
+
+    border-left: 1px solid #000;
+
+    border-right: 1px solid #000;
+
+    font-size: 20px;
+
+    outline: none;
+
+}
+
+/* --- PAINEL DE PAGAMENTO --- */
+
+.cart-checkout-panel {
+
+    width: 100%;
+
+    border: 1px solid #000;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.panel-row { display: flex; flex-direction: column; gap: 10px; }
+
+.split-row { flex-direction: row; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; }
+
+.panel-label { font-size: 22px; }
+
+.payment-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+ 
+.pay-radio {
+
+    display: none;
+
+}
+ 
+.pay-btn {
+
+    background-color: var(--cinza-input);
+
+    border: 1px solid #000;
+
+    padding: 8px 15px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    user-select: none;
+
+    transition: background-color 0.2s ease;
+
+}
+
+.pay-btn img { width: 20px; height: 20px; object-fit: contain; }
+ 
+.pay-radio:checked + .pay-btn {
+
+    background-color: var(--amarelo-claro);
+
+    font-weight: bold;
+
+}
+
+.coupon-box { display: flex; flex-direction: column; gap: 10px; }
+
+.coupon-input-group { display: flex; height: 45px; border: 1px solid #000; }
+
+.coupon-field { border: none; padding: 0 15px; font-size: 18px; background-color: var(--cinza-input); outline: none; width: 180px; }
+
+.coupon-btn { background-color: var(--amarelo-claro); border: none; border-left: 1px solid #000; padding: 0 20px; font-size: 18px; cursor: pointer; }
+
+.cards-box img { max-width: 180px; object-fit: contain; }
+
+.panel-footer-row {
+
+    border-top: 1px solid #000;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+.select-all-box { display: flex; align-items: center; gap: 10px; font-size: 22px; cursor: pointer; }
+
+.total-box { font-size: 24px; }
+
+.total-value { font-size: 32px; font-weight: bold; color: var(--amarelo-escuro); margin-left: 10px; }
+
+.login-submit-btn {
+
+    background-color: var(--amarelo-claro);
+
+    color: #000;
+
+    border: 1px solid #000;
+
+    font-family: 'Itim', cursive;
+
+    font-size: 28px;
+
+    height: 56px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+}
+
+.login-submit-btn:hover { transform: scale(1.03); background-color: var(--amarelo-escuro); }
+
+.checkout-submit-btn { padding: 0 40px; }
+
+/* ================= NEWSLETTER & FOOTER ================= */
+
+.newsletter { background-color: var(--amarelo-escuro); display: flex; justify-content: center; align-items: center; padding: 25px 5%; gap: 30px; flex-wrap: wrap; }
+
+.newsletter p { font-size: 20px; line-height: 1.2; }
+
+.newsletter-form { display: flex; gap: 15px; flex-wrap: wrap; flex-grow: 1; max-width: 800px; }
+
+.newsletter-form input { flex: 1; min-width: 200px; padding: 10px 15px; border: none; font-size: 18px; outline: none; }
+
+.newsletter-form button { background-color: var(--amarelo-claro); border: none; padding: 10px 25px; font-size: 18px; cursor: pointer; font-weight: bold; transition: transform 0.2s ease; }
+
+.newsletter-form button:hover { transform: scale(1.05); }
+
+.main-footer { background-color: var(--amarelo-claro); display: flex; justify-content: space-between; padding: 40px 5%; flex-wrap: wrap; gap: 40px; }
+
+.footer-left { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; }
+
+.footer-logo-link { display: block; width: 120px; height: 120px; }
+
+.footer-logo { width: 100%; height: 100%; object-fit: contain; }
+
+.social-contact { display: flex; align-items: center; gap: 15px; }
+
+.social-icons { display: flex; gap: 10px; }
+
+.social-icon { width: 40px; height: 40px; border-radius: 50%; background-color: var(--cor-texto); display: flex; align-items: center; justify-content: center; text-decoration: none; overflow: hidden; transition: transform 0.2s ease; }
+
+.social-icon:hover { transform: scale(1.15); }
+
+.social-icon img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+
+.footer-links { display: flex; gap: 60px; flex-wrap: wrap; }
+
+.link-column { display: flex; flex-direction: column; gap: 10px; }
+
+.footer-font { font-family: 'Julius Sans One', sans-serif; text-decoration: none; color: var(--cor-texto); font-size: 14px; text-transform: uppercase; }
+
+/* ================= RESPONSIVIDADE (MOBILE) ================= */
+
+@media (max-width: 768px) {
+
+    .header-center-container { gap: 35px; }
+
+    .profile-header .logo-link { width: 75px; height: 68px; }
+
+    .profile-header .header-icon-img { width: 28px; height: 28px; }
+
+    .cart-wrapper { max-width: 100%; }
+
+    .login-title { font-size: 30px; }
+
+    .cart-header-row { display: none; }
+
+    .cart-item-row { flex-direction: column; gap: 15px; text-align: center; }
+
+    .cart-col-prod { width: 100%; flex-direction: column; }
+
+    .item-flex { flex-direction: column; }
+
+    .cart-col-qty, .cart-col-price { width: 100%; justify-content: center; }
+
+    .split-row { flex-direction: column; align-items: center; gap: 20px; }
+
+    .payment-buttons { justify-content: center; }
+
+    .panel-footer-row { flex-direction: column; text-align: center; }
+
+    .checkout-submit-btn { width: 100%; height: 48px; font-size: 22px; }
+
+    .newsletter { flex-direction: column; text-align: center; }
+
+    .newsletter-form { flex-direction: column; width: 100%; }
+
+    .main-footer { flex-direction: column; align-items: center; text-align: center; }
+
+    .footer-left { flex-direction: column; justify-content: center; }
+
+    .social-contact { flex-direction: column; }
+
+    .footer-links { justify-content: center; text-align: center; gap: 30px; }
+
+}
+ 
+
+/* Aumenta o ícone de perfil sem esticar o header */
+
+.perfil-maior {
+
+    transform: scale(4.0); /* 1.3 significa 30% maior. Se achar muito grande ou pequeno, mude para 1.25 ou 1.35 */
+
+}
+ 
+ 
